@@ -16,12 +16,12 @@ export default function ContactSection() {
     {
       icon: <MapPin className="w-6 h-6 text-[rgb(var(--primary))]" />,
       title: t("address"),
-      details: "Lara Caddesi, No:123, 07100 Muratpaşa/Antalya, Turkey",
+      details: "Kızılarık, 2754. Sk No:207 D:1, 07300 Muratpaşa/Antalya",
     },
     {
       icon: <Phone className="w-6 h-6 text-[rgb(var(--primary))]" />,
       title: t("phone"),
-      details: "+90 242 123 4567",
+      details: "+90530 120 35 07",
     },
     {
       icon: <Mail className="w-6 h-6 text-[rgb(var(--primary))]" />,

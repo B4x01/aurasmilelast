@@ -68,7 +68,7 @@ export default function PrivacyPolicyPage() {
             <p className="mb-4">
               E-posta: info@aurasmilestudio.com
               <br />
-              Telefon: +90 242 123 4567
+              Telefon: +90530 120 35 07
             </p>
 
             <div className="mt-8">

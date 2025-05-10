@@ -201,7 +201,7 @@ export default function Header() {
           </div>
 
           <Link
-            href="https://wa.me/905321234567"
+            href="https://wa.me/+905301203507"
             target="_blank"
             rel="noopener noreferrer"
             className="btn btn-primary btn-md rounded-full"
@@ -351,7 +351,7 @@ export default function Header() {
             </Link>
 
             <Link
-              href="https://wa.me/905321234567"
+              href="https://wa.me/+905301203507"
               target="_blank"
               rel="noopener noreferrer"
               className="btn btn-primary btn-md rounded-full text-center"

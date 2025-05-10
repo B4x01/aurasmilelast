@@ -49,13 +49,13 @@ export default function Home() {
               </div>
               <div>
                 <p className="text-sm text-white/80">{t("homeCallUs")}</p>
-                <a href="tel:+905321234567" className="text-xl font-bold hover:underline">
-                  +90 532 123 45 67
+                <a href="tel:+905301203507" className="text-xl font-bold hover:underline">
+                  +90530 120 35 07
                 </a>
               </div>
             </div>
             <Link
-              href="https://wa.me/905321234567"
+              href="https://wa.me/+905301203507"
               target="_blank"
               rel="noopener noreferrer"
               className="btn btn-secondary btn-md rounded-md w-full block text-center"
@@ -242,10 +242,10 @@ export default function Home() {
               {t("homeContactFormButton")}
             </Link>
             <a
-              href="tel:+905321234567"
+              href="tel:+905301203507"
               className="btn btn-outline btn-lg rounded-md transform hover:scale-105 flex items-center justify-center"
             >
-              <Phone className="mr-2 h-5 w-5" /> +90 532 123 45 67
+              <Phone className="mr-2 h-5 w-5" /> +90530 120 35 07
             </a>
           </div>
         </div>
