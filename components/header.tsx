@@ -71,20 +71,28 @@ export default function Header() {
 
           {/* Services Dropdown */}
           <div className="dropdown relative group">
-            <button className="flex items-center text-gray-800 group-hover:text-[rgb(var(--secondary))] transition-colors font-medium">
+            <button
+              className={`flex items-center text-gray-800 group-hover:text-[rgb(var(--secondary))] transition-colors font-medium ${language === "de" ? "text-sm" : ""}`}
+            >
               {t("services")} <ChevronDown className="ml-1 h-4 w-4" />
             </button>
             <div className="dropdown-content mt-2 absolute left-0 min-w-[200px] bg-white shadow-lg rounded-md overflow-hidden z-50 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300">
-              <Link href="/services/accommodation" className="dropdown-item">
+              <Link href="/services/accommodation" className={`dropdown-item ${language === "de" ? "text-sm" : ""}`}>
                 {t("accommodation")}
               </Link>
-              <Link href="/services/tickets-transportation" className="dropdown-item">
+              <Link
+                href="/services/tickets-transportation"
+                className={`dropdown-item ${language === "de" ? "text-sm" : ""}`}
+              >
                 {t("ticketsTransportation")}
               </Link>
-              <Link href="/services/health-services" className="dropdown-item">
+              <Link href="/services/health-services" className={`dropdown-item ${language === "de" ? "text-sm" : ""}`}>
                 {t("healthServices")}
               </Link>
-              <Link href="/services/transfer-services" className="dropdown-item">
+              <Link
+                href="/services/transfer-services"
+                className={`dropdown-item ${language === "de" ? "text-sm" : ""}`}
+              >
                 {t("transferServices")}
               </Link>
             </div>
@@ -92,21 +100,21 @@ export default function Header() {
 
           <Link
             href="/antalya-guide"
-            className="text-gray-800 hover:text-[rgb(var(--secondary))] transition-colors font-medium"
+            className={`text-gray-800 hover:text-[rgb(var(--secondary))] transition-colors font-medium ${language === "de" ? "text-sm" : ""}`}
           >
             {t("antalyaGuide")}
           </Link>
 
           <Link
             href="/about"
-            className="text-gray-800 hover:text-[rgb(var(--secondary))] transition-colors font-medium"
+            className={`text-gray-800 hover:text-[rgb(var(--secondary))] transition-colors font-medium ${language === "de" ? "text-sm" : ""}`}
           >
             {t("about")}
           </Link>
 
           <Link
             href="/contact"
-            className="text-gray-800 hover:text-[rgb(var(--secondary))] transition-colors font-medium"
+            className={`text-gray-800 hover:text-[rgb(var(--secondary))] transition-colors font-medium ${language === "de" ? "text-sm" : ""}`}
           >
             {t("contact")}
           </Link>
@@ -201,7 +209,7 @@ export default function Header() {
           </div>
 
           <Link
-            href="https://wa.me/+905301203507"
+            href="https://wa.me/905321234567"
             target="_blank"
             rel="noopener noreferrer"
             className="btn btn-primary btn-md rounded-full"
@@ -279,7 +287,7 @@ export default function Header() {
           <nav className="flex flex-col space-y-4">
             <Link
               href="/"
-              className="text-gray-800 hover:text-[rgb(var(--secondary))] transition-colors font-medium"
+              className={`text-gray-800 hover:text-[rgb(var(--secondary))] transition-colors font-medium ${language === "de" ? "text-sm" : ""}`}
               onClick={() => setIsMenuOpen(false)}
             >
               {t("home")}
@@ -289,7 +297,7 @@ export default function Header() {
             <div>
               <button
                 onClick={toggleServices}
-                className="flex items-center justify-between w-full text-gray-800 hover:text-[rgb(var(--secondary))] transition-colors font-medium"
+                className={`flex items-center justify-between w-full text-gray-800 hover:text-[rgb(var(--secondary))] transition-colors font-medium ${language === "de" ? "text-sm" : ""}`}
               >
                 {t("services")}
                 <ChevronDown className={`h-4 w-4 transition-transform ${isServicesOpen ? "rotate-180" : ""}`} />
@@ -297,28 +305,28 @@ export default function Header() {
               <div className={`mobile-dropdown-content pl-4 ${isServicesOpen ? "open" : ""}`}>
                 <Link
                   href="/services/accommodation"
-                  className="block py-2 text-gray-700 hover:text-[rgb(var(--secondary))]"
+                  className={`block py-2 text-gray-700 hover:text-[rgb(var(--secondary))] ${language === "de" ? "text-sm" : ""}`}
                   onClick={() => setIsMenuOpen(false)}
                 >
                   {t("accommodation")}
                 </Link>
                 <Link
                   href="/services/tickets-transportation"
-                  className="block py-2 text-gray-700 hover:text-[rgb(var(--secondary))]"
+                  className={`block py-2 text-gray-700 hover:text-[rgb(var(--secondary))] ${language === "de" ? "text-sm" : ""}`}
                   onClick={() => setIsMenuOpen(false)}
                 >
                   {t("ticketsTransportation")}
                 </Link>
                 <Link
                   href="/services/health-services"
-                  className="block py-2 text-gray-700 hover:text-[rgb(var(--secondary))]"
+                  className={`block py-2 text-gray-700 hover:text-[rgb(var(--secondary))] ${language === "de" ? "text-sm" : ""}`}
                   onClick={() => setIsMenuOpen(false)}
                 >
                   {t("healthServices")}
                 </Link>
                 <Link
                   href="/services/transfer-services"
-                  className="block py-2 text-gray-700 hover:text-[rgb(var(--secondary))]"
+                  className={`block py-2 text-gray-700 hover:text-[rgb(var(--secondary))] ${language === "de" ? "text-sm" : ""}`}
                   onClick={() => setIsMenuOpen(false)}
                 >
                   {t("transferServices")}
@@ -328,7 +336,7 @@ export default function Header() {
 
             <Link
               href="/antalya-guide"
-              className="text-gray-800 hover:text-[rgb(var(--secondary))] transition-colors font-medium"
+              className={`text-gray-800 hover:text-[rgb(var(--secondary))] transition-colors font-medium ${language === "de" ? "text-sm" : ""}`}
               onClick={() => setIsMenuOpen(false)}
             >
               {t("antalyaGuide")}
@@ -336,7 +344,7 @@ export default function Header() {
 
             <Link
               href="/about"
-              className="text-gray-800 hover:text-[rgb(var(--secondary))] transition-colors font-medium"
+              className={`text-gray-800 hover:text-[rgb(var(--secondary))] transition-colors font-medium ${language === "de" ? "text-sm" : ""}`}
               onClick={() => setIsMenuOpen(false)}
             >
               {t("about")}
@@ -344,7 +352,7 @@ export default function Header() {
 
             <Link
               href="/contact"
-              className="text-gray-800 hover:text-[rgb(var(--secondary))] transition-colors font-medium"
+              className={`text-gray-800 hover:text-[rgb(var(--secondary))] transition-colors font-medium ${language === "de" ? "text-sm" : ""}`}
               onClick={() => setIsMenuOpen(false)}
             >
               {t("contact")}

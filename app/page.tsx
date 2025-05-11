@@ -6,7 +6,7 @@ import { Phone, ArrowRight } from "lucide-react"
 import { useLanguage } from "@/components/language-provider"
 
 export default function Home() {
-  const { t } = useLanguage()
+  const { t, language } = useLanguage()
 
   return (
     <>
@@ -20,7 +20,7 @@ export default function Home() {
 
         {/* Hero Content */}
         <div className="container mx-auto px-4 grid md:grid-cols-2 gap-8 relative z-20">
-          <div className="text-white animate-fade-in">
+          <div className={`text-white animate-fade-in ${language === "de" ? "de-text-container" : ""}`}>
             <h1 className="text-5xl md:text-6xl font-bold mb-4">{t("homeHeroTitle")}</h1>
             <p className="text-xl md:text-2xl mb-8 max-w-xl">{t("homeHeroDescription")}</p>
             <div className="flex flex-col sm:flex-row gap-4">
@@ -40,7 +40,9 @@ export default function Home() {
           </div>
 
           {/* Info Card */}
-          <div className="bg-[rgb(var(--primary))] text-white p-8 rounded-xl shadow-xl animate-slide-up">
+          <div
+            className={`bg-[rgb(var(--primary))] text-white p-8 rounded-xl shadow-xl animate-slide-up ${language === "de" ? "de-text-container" : ""}`}
+          >
             <h2 className="text-2xl font-bold mb-4">{t("homeInfoCardTitle")}</h2>
             <p className="mb-6">{t("homeInfoCardDescription")}</p>
             <div className="flex items-center gap-4 mb-6">
@@ -50,12 +52,12 @@ export default function Home() {
               <div>
                 <p className="text-sm text-white/80">{t("homeCallUs")}</p>
                 <a href="tel:+905301203507" className="text-xl font-bold hover:underline">
-                  +90530 120 35 07
+                +905301203507
                 </a>
               </div>
             </div>
             <Link
-              href="https://wa.me/+905301203507"
+              href="https://wa.me/905301203507"
               target="_blank"
               rel="noopener noreferrer"
               className="btn btn-secondary btn-md rounded-md w-full block text-center"
@@ -245,7 +247,7 @@ export default function Home() {
               href="tel:+905301203507"
               className="btn btn-outline btn-lg rounded-md transform hover:scale-105 flex items-center justify-center"
             >
-              <Phone className="mr-2 h-5 w-5" /> +90530 120 35 07
+              <Phone className="mr-2 h-5 w-5" /> +905301203507
             </a>
           </div>
         </div>

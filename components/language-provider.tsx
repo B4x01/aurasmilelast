@@ -1,6 +1,6 @@
 "use client"
 
-import { createContext, useContext, useState, type ReactNode } from "react"
+import { createContext, useContext, useState, useEffect, type ReactNode } from "react"
 import { translations } from "@/lib/translations"
 
 type Language = "tr" | "en" | "de"
@@ -16,6 +16,11 @@ const LanguageContext = createContext<LanguageContextType | undefined>(undefined
 
 export function LanguageProvider({ children }: { children: ReactNode }) {
   const [language, setLanguage] = useState<Language>("tr")
+
+  // Dil değiştiğinde HTML lang özelliğini güncelle
+  useEffect(() => {
+    document.documentElement.lang = language
+  }, [language])
 
   const t = (key: TranslationKey): string => {
     return translations[language][key] || translations.en[key] || key

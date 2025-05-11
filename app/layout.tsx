@@ -10,7 +10,6 @@ const inter = Inter({ subsets: ["latin"] })
 export const metadata = {
   title: "Aura Smile Studio - Travel Agency",
   description: "Your premier travel agency in Antalya, Turkey",
-    generator: 'v0.dev'
 }
 
 export default function RootLayout({
@@ -23,7 +22,7 @@ export default function RootLayout({
       <body className={`${inter.className} min-h-screen flex flex-col`}>
         <LanguageProvider>
           <Header />
-          <main className="flex-grow">{children}</main>
+          <main className="flex-grow pt-20 md:pt-24">{children}</main>
           <Footer />
         </LanguageProvider>
       </body>
